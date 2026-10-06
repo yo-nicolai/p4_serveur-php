@@ -1,6 +1,13 @@
 <?php
     require 'header.php';
-    require 'oeuvres.php';
+    require 'bdd.php';
+
+    $bdd = connexion();
+
+    $sqlQuery = 'SELECT * FROM oeuvres';
+    $oeuvresStatement = $bdd->prepare($sqlQuery);
+    $oeuvresStatement->execute();
+    $oeuvres = $oeuvresStatement->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <div id="liste-oeuvres">
     <?php foreach($oeuvres as $oeuvre): ?>
