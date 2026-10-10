@@ -10,7 +10,7 @@ if(empty($_POST['titre'])
     header('Location: ajouter.php?erreur=true');
 } else {
     $titre = htmlspecialchars($_POST['titre']);
-    $descriplion = htmlspecialchars($_POST['description']);
+    $description = htmlspecialchars($_POST['description']);
     $artiste = htmlspecialchars($_POST['artiste']);
     $image = htmlspecialchars($_POST['image']);
 
