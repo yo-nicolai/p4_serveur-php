@@ -1,4 +1,7 @@
 <?php require 'header.php'; ?>
+<?php if(!empty($_GET['erreur']) && $_GET['erreur'] === 'true'): ?>
+    <p>Veuillez remplir tous les champs et vérifier que l'URL de l'image est valide.</p>
+<?php endif; ?>
 
 <form action="traitement.php" method="POST">
     <div class="champ-formulaire">
